@@ -107,4 +107,11 @@ function MostrarNombre(PrimerNombre='Jose',SegundNombre='Maria') {
 console.log(MostrarNombre())
 console.log(MostrarNombre('Andrea'))
 //* TODO apply,call, bind 
-
+//!INSTRUCCIONES PARA EL SIGUIENTE RETO
+//?El índice de masa corporal (IMC) se calcula de la siguiente manera: IMC = peso en Kg / (altura x altura) en m2. 
+//?Escribe una función que calcule el iMC. El IMC se utiliza para definir ampliamente diferentes grupos de peso en adultos de 20 años o más. Verifique si una persona tiene bajo peso, es normal, tiene sobrepeso u obesidad según la información que se proporciona a continuación.
+//?Los mismos grupos se aplican tanto a hombres como a mujeres.
+//?Bajo peso: el IMC es inferior a 18.5
+//?Peso normal: el IMC es de 18.5 a 24.9
+//?Sobrepeso: el IMC es de 25 a 29.9
+//?Obeso: el IMC es de 30 o más
