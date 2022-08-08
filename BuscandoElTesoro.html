@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Buscando el tesoro escondido</h1>
+    <img id="mapa" width="400" height="400" src="./mapa.jpg" />
+    <p id="distancia"></p>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var numeroAzar= function (valor) {
+            return Math.floor(Math.random()*valor)
+        }
+        var traeDistancia=function(event,tesoro){
+            var diffX=event.offsetX-tesoro.x;
+            var diffY=event.offsetY-tesoro.y;
+            return Math.sqrt((diffX*diffX)+(diffY*diffY))
+        }
+        var traeAyuda=function(distancia){
+            if(distancia<15){
+                return "Quemando!"
+            }
+            else if(distancia<20){
+                return "Muy Caliente!"
+            }
+            else if(distancia<40){
+                return "Caliente"
+            }
+            else if(distancia<80){
+                return "Tibio"
+            }
+            else if(distancia<160){
+                return "Frio"
+            }
+        }
+        var ancho=400;
+        var alto=400;
+        var clicks=0;
+        var tesoro={
+            x:numeroAzar(ancho),
+            y:numeroAzar(alto)
+        }
+        $("#mapa").click(function (event) {
+            clicks++;
+            var distancia=traeDistancia(event, tesoro);
+            var ayuda=traeAyuda(distancia);
+            $("#distancia").text(ayuda)
+            if(distancia<15){
+                alert("Encontraste el tesoro en " + clicks + " clicks")
+            }
+
+        })
+        
+    </script>
+</body>
+</html>
