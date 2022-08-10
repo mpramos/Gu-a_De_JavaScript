@@ -5,7 +5,7 @@ console.log(arrayContructor)
 const arrayCorchetes=[];
 console.log(arrayCorchetes)
 //! Creación de arrays con valores
-const numeros=[0,1,2,3,4,5]//numbers
+var numeros=[0,1,2,3,4,5]//numbers
 const frutas=['banana','manzana','piña','mango']// array de strings
 console.log(numeros)
 console.log(frutas)
@@ -26,7 +26,7 @@ let compañiaString='Facebook,Google,Microsoft,Apple,Amazon'
 const compañias=compañiaString.split(',')
 console.log(compañias)
 let texto='Hola a todos hoy estaremos viendo los metodos de los arrays'
-const palabras=texto.split(' ')
+var palabras=texto.split(' ')
 console.log(palabras)
 //! Acceso a elementos del array mediante índice
 
@@ -110,6 +110,25 @@ console.log(numeritos7)
 // sort
 numeritos7.sort()
 console.log('sort ',numeritos7)
+// METODOS DE LOS ARRAYS
+//! map
+[1,2,4]
+[1,4,16]
+var numeros=[1,2,4]
+var dobles=numeros.map((numero)=>numero*numero)
+console.log(numeros)
+console.log(dobles)
+// filter
+var palabras=['espejo','limite','invierno','color']
+var resultado=palabras.filter(function (palabrita) {
+    if(palabrita.length>=6){
+        return palabrita
+    }
+})
+var palabras=['espejo','limite','invierno','color']
+var resultado=palabras.filter((palabrita)=>palabrita.length>=6)
+console.log(resultado);
+
 
 
 
