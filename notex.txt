@@ -1,0 +1,4 @@
+comando basico de git
+git init
+git add .
+git status 
